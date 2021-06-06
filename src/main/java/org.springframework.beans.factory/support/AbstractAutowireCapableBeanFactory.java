@@ -3,6 +3,9 @@ package org.springframework.beans.factory.support;
 import org.springframework.beans.factory.BeansException;
 import org.springframework.beans.factory.config.BeanDefinition;
 
+/**
+ * 源码：Beans的生命周期在这个文件完成
+ */
 public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory {
 
     @Override
