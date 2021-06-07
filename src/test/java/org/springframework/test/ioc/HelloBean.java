@@ -2,8 +2,31 @@ package org.springframework.test.ioc;
 
 public class HelloBean {
 
-    public String sayHello() {
-        System.out.println("Hello");
-        return "Hello";
+    private String foo;
+
+    private String bar;
+
+    public String getFoo() {
+        return foo;
+    }
+
+    public void setFoo(String foo) {
+        this.foo = foo;
+    }
+
+    public String getBar() {
+        return bar;
+    }
+
+    public void setBar(String bar) {
+        this.bar = bar;
+    }
+
+    @Override
+    public String toString() {
+        return "HelloBean{" +
+                "foo='" + foo + '\'' +
+                ", bar='" + bar + '\'' +
+                '}';
     }
 }
