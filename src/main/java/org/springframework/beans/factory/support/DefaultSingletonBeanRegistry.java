@@ -21,7 +21,7 @@ public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
     }
 
     //源码是在Bean实例完成创建之后，只保留一级缓存以及注册beanName的顺序，二三级缓存清除
-    protected void addSingleton(String beanName, Object singletonObject) {
+    public void addSingleton(String beanName, Object singletonObject) {
         this.singletonObjects.put(beanName, singletonObject);
     }
 
