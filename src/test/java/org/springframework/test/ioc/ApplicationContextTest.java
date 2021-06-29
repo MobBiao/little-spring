@@ -3,8 +3,8 @@ package org.springframework.test.ioc;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.test.ioc.bean.Car;
-import org.springframework.test.ioc.bean.Person;
+import org.springframework.test.bean.Car;
+import org.springframework.test.bean.Person;
 
 public class ApplicationContextTest {
 
