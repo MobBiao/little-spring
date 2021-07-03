@@ -23,6 +23,7 @@ public class CglibAopProxy implements AopProxy{
 
     @Override
     public Object getProxy() {
+        // Weaving : 织入，也就是产生代理的过程
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(advised.getTargetSource().getTarget().getClass());
         //不依赖接口，动态构建class文件生成子类
