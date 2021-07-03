@@ -9,6 +9,9 @@ import java.lang.reflect.Method;
 
 /**
  * cglib 动态代理
+ * CGLib全称为Code Generation Library，是一个强大的高性能，高质量的代码生成类库，可以在运行期扩展Java类与实现Java接口，
+ * CGLib封装了asm，可以再运行期动态生成新的class。和JDK动态代理相比较：JDK创建代理有一个限制，就是只能为接口创建代理实例，
+ * 而对于没有通过接口定义业务方法的类，则可以通过CGLib创建动态代理。
  */
 public class CglibAopProxy implements AopProxy{
 

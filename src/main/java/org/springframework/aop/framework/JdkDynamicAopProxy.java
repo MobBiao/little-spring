@@ -9,6 +9,9 @@ import java.lang.reflect.Proxy;
 
 /**
  * JDK动态代理
+ * JDK动态代理主要涉及到java.lang.reflect包中的两个类：Proxy和InvocationHandler。InvocationHandler是一个接口，
+ * 通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态将横切逻辑和业务逻辑编制在一起。
+ * Proxy利用InvocationHandler动态创建一个符合某一接口的实例，生成目标类的代理对象。
  */
 public class JdkDynamicAopProxy implements AopProxy, InvocationHandler {
 
@@ -23,7 +26,7 @@ public class JdkDynamicAopProxy implements AopProxy, InvocationHandler {
      */
     @Override
     public Object getProxy() {
-        //依赖接口，即第二个参数
+        //依赖InvocationHandler接口，即第三个参数
         return Proxy.newProxyInstance(getClass().getClassLoader(), advised.getTargetSource().getTargetClass(), this);
     }
 
