@@ -1,0 +1,20 @@
+##国内外研究现状
+###节点定位（粗粒度）
+用图模型，基于应用级别的指标：MonitorRank，Microscope，CloudRanger
+用图模型，基于应用级别(SLO)和系统级别(cpu、内存、io、网络)的指标：MicroRCA
+
+###根因分析（细粒度）
+机器学习: Seer，xxx usingDeep Learning,
+模式识别：Alvaro Brand´on
+因果推理：Sieve，Loud，MicroCause，CauseInfer
+
+#第二章 相关技术研究
+## 智能运维技术概述
+
+## 时间序列异常检测基础
+
+## 根因分析
+MicroRCA根因分析
+（缺陷：如MicroRCA只定位微服务，不支持定位主机。其次，Personalized PageRank不好收敛，原因在于相关性越高节点之间调用次数越多，导致异常边数量不平衡，出现长尾效应。最后，复杂度过大这个优化量力而为~）
+MicroCause根因分析
+缺陷：需要识别多层的根因指标，计算效率低下
